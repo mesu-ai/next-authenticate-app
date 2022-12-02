@@ -15,7 +15,7 @@ const validationSchema = Yup.object({
   password: Yup.string()
     .min(6, 'Password should be at least 6 charecter long')
     .required('Password is required'),
-  // .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,16}$/, 'Invalid password'),
+ 
 });
 
 const onSubmit = (data) => {
@@ -56,7 +56,6 @@ const login = () => {
               type='submit'
             >
               Login
-              {/* <LoadingButtonWithTitle title="Log in" loading={isLoading} spinnerClassName="text-action" /> */}
             </button>
           </Form>
         </fieldset>
