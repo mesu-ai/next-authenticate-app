@@ -13,4 +13,4 @@ export const getRefreshToken = () => cookies.get('refresh-token');
 export const removeAccessToken = () => cookies.remove('access-token');
 export const removeRegreshToken = () => cookies.remove('refresh-token');
 
-// export default cookies;
+export default cookies;

@@ -1,11 +1,9 @@
 import React from 'react';
+import ProductsList from '../components/molecules/ProductsList';
 
 const products = () => {
-  return (
-    <div>
-      products page 
-    </div>
-  );
+  return <ProductsList/>
+
 };
 
 export default products;
