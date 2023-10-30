@@ -3,11 +3,10 @@ import React from 'react';
 import { getAccessToken } from '../../utils/cookies';
 
 
-
 const ProductsList = () => {
   const token = getAccessToken();
   const router=useRouter();
-  console.log(router);
+  // console.log(router);
   
 
   if(!token){

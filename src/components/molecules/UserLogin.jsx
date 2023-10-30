@@ -7,14 +7,17 @@ import { useRouter } from 'next/router';
 
 
 const initialValues = {
-  email: '',
+  mobileNo: '',
+  // email:'',
   password: '',
+  isGuestLogin: false,
 };
 
 const validationSchema = Yup.object({
-  email: Yup.string()
-    .email('Invalid email address')
-    .required('Email is required'),
+  // email: Yup.string()
+  //   .email('Invalid email address')
+  //   .required('Email is required'),
+  mobileNo: Yup.required('Mobile/Email is required'),
   password: Yup.string()
     .min(6, 'Password should be at least 6 charecter long')
     .required('Password is required'),
@@ -58,11 +61,18 @@ const UserLogin = () => {
         {/* <fieldset disabled={isLoading}> */}
         <fieldset>
           <Form className=''>
-            <InputField
+            {/* <InputField
               // icon={<EmailIcon classname="w-4 h-5" />}
               name='email'
               type='email'
               placeholder='Email address'
+              className='bg-teal-50 rounded-xl px-4 py-3'
+            /> */}
+            <InputField
+              // icon={<EmailIcon classname="w-4 h-5" />}
+              name='mobileNo'
+              type='text'
+              placeholder='Mobile/Email address'
               className='bg-teal-50 rounded-xl px-4 py-3'
             />
 

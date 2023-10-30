@@ -3,7 +3,7 @@ import { getRefreshToken, setAccessToken, setRefreshToken } from "../utils/cooki
 import { baseURL } from "./config/baseURL";
 
 const authAxiosInstance=axios.create({
-  baseURL:`${baseURL}/auth`,
+  baseURL:`${baseURL}/api/Auth/`,
   timeout:10000,
 })
 
@@ -15,7 +15,7 @@ const authAPIs ={
 
   async userSignin (data){
     console.log(data);
-    const response= await authAxiosInstance.post('/login', data);
+    const response= await authAxiosInstance.post('/CustomerLogin', data);
     if([200,201].includes(response.status)){
       const {access_token,refresh_token}=response?.data?.data;
       // console.log(response.data?.data);
