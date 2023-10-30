@@ -5,9 +5,11 @@ import Main from './main/Main';
 
 const Layout = ({ children }) => {
   return (
-    <div className='container mx-auto min-h-screen flex flex-col justify-between'>
+    <div className='min-h-screen flex flex-col justify-between'>
       <Header />
-      <Main>{children}</Main>
+      <div className='container mx-auto'>
+        <Main>{children}</Main>
+      </div>  
       <Footer />
     </div>
   );
